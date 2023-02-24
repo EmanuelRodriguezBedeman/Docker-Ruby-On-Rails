@@ -2,7 +2,10 @@
 
 <p align="center">This files are needed to start locally the app, with the only condition of having installed Docker on your system.</p>
 
-<h3>FAQ:</h3>
+<h3><u>FAQ:</u></h3>
+
+* I don't want to install anything, is there any link to see the see the project?
+  * The app is working to be deployed somewhere in March, stay tune it!
 
 * Do I need to install ruby on my pc?
   * No, you don't need to install ruby on your system, only [Docker](https://www.docker.com/)
@@ -13,9 +16,6 @@
 * If I already have installed Ruby On Rails 7 on my OS, can I still run the app?
   * Yes, you can. Just remember to install the same gems's versions, setup redis, sidekiq and the .env variables.
   * Keep in mind that the app wasn't made by this method, so I can't guaranteed you that it'll work.
-
-* How I run all this?
-  * Just follow the steps below ↓
 
 <h2>Steps</h2>
 
