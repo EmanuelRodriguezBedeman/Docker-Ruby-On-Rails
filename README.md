@@ -15,10 +15,10 @@
   * Keep in mind that the app wasn't made by this method, so I can't guaranteed you that it'll work.
 
 * How I run all this?
- * Just follow the steps below ↓
+  * Just follow the steps below ↓
 
 <h2>Steps</h2>
 
-1. Create on **your** system a folder called "`scheduled_tweets`".
+1. Create folder called "`scheduled_tweets`".
 2. [Download the app .zip](https://github.com/EmanuelRodriguezBedeman/Rails---Scheduled-Tweets/archive/refs/heads/main.zip) 
 3. [Download this repo .zip](https://github.com/EmanuelRodriguezBedeman/Docker-ScheduleTweets/archive/refs/heads/main.zip])
