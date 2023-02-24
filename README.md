@@ -20,5 +20,6 @@
 <h2>Steps</h2>
 
 1. Create folder called "`scheduled_tweets`".
-2. [Download the app .zip](https://github.com/EmanuelRodriguezBedeman/Rails---Scheduled-Tweets/archive/refs/heads/main.zip) and extract it **inside** scheduled_tweets's folder
-3. [Download this repo .zip](https://github.com/EmanuelRodriguezBedeman/Docker-ScheduleTweets/archive/refs/heads/main.zip]) 
+2. [Download the app .zip](https://github.com/EmanuelRodriguezBedeman/Rails---Scheduled-Tweets/archive/refs/heads/main.zip) and extract it **inside** scheduled_tweets's folder.
+3. [Download this repo .zip](https://github.com/EmanuelRodriguezBedeman/Docker-ScheduleTweets/archive/refs/heads/main.zip]) and extract in the **same directory** as schedule_tweets' folder.
+4. 
