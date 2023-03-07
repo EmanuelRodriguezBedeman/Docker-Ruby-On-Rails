@@ -1,0 +1,31 @@
+<%= form_with model: tweet, data: { turbo: true }, local: true do |form| %>
+    <%= render "shared/form_errors", form: form %>
+
+    <div class="my-3">
+        <h4>Tweet content:</h4>
+        <%= form.text_area :body, :maxlength => 280, class: "form-control my-3" %>
+    </div>
+
+    <div class="d-flex justify-content-between my-3">
+        <div class="d-inline-block">
+            <h4 class="d-inline-block me-3">Select Twitter account:</h4>
+            <div class="d-inline-block">
+                <%= form.collection_select :twitter_account_id, Current.user.twitter_accounts, :id, :username, {}, {class: "form-select"} %>
+            </div>
+        </div>
+        <div class="d-inline-block">
+            <h4 class="d-inline-block me-3">Date to publish:</h4>
+            <%= form.datetime_select :publish_at, class:"d-inline-block" %>
+        </div>
+    </div>
+
+    <hr class="my-3">
+
+    <div class="d-flex justify-content-between">
+        <%= form.button "Schedule", class: "btn btn-primary btn-lg button-hover" %>
+
+        <% if form.object.persisted? %>
+            <%= link_to "Delete", form.object, data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'}, class: "btn btn-outline-danger btn-lg" %>
+        <% end %>
+    </div>
+<% end %>

@@ -1,0 +1,99 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg border-bottom border-dark border-1">
+    <div class="container-fluid" role="navigation">
+
+        <!-- Navbar Title -->
+        <div class="navbar-header" role="navigation">
+            <%= link_to tweets_path, class:"navbar-brand h1 me-3" do %>
+                <span class="border-bottom">Tweets</span>
+                <i class="bi bi-twitter text-white ms-1"></i>
+            <% end %>
+        </div>
+
+        <!-- Dropdown Navbar Content -->
+            <!-- Navbar Button -->
+        <button class="button-hover navbar-toggler border-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-nav" aria-controls="navbar-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar-nav">
+            <!-- Navbar Links -->
+            <ul class="nav navbar-nav navbar-left large-navbar-items">
+                <hr class="d-lg-none border-white my-1 w-25">
+                <div class="vr d-none d-lg-block "></div>
+                <li class= "nav-item" id="home">
+                    <%= link_to "Home", root_path, class:"nav-link link-hover"%>
+                </li>
+                <div class="vr d-none d-lg-block "></div>
+                <li class= "nav-item" id="about">
+                    <%= link_to "About", about_path, class:"nav-link link-hover"%>
+                </li>
+                <div class="vr d-none d-lg-block "></div>
+                <li class= "nav-item" id="twitter-accounts">
+                    <%= link_to "Twitter Accounts", twitter_accounts_path, class:"nav-link link-hover"%>
+                </li>
+            </ul>
+
+            <!-- Navbar Session Interactions -->
+            <ul class="nav navbar-nav ms-auto">
+                <% if Current.user %>
+
+                    <!-- Edit pass and log-out for lg screens -->
+                    <div class="d-none d-lg-flex">
+                        <li class="nav-item">
+                            <%= link_to "Edit Password", password_path, class:"nav-link button-hover border rounded-pill" %>
+                        </li>
+                        <div class="vr d-none d-lg-block mx-2 p-0"></div>
+                        <li class="nav-item">
+                            <%= button_to "Logout", logout_path, method: :delete, class:"btn btn-outline-light custom-border button-hover border rounded-pill"%>
+                        </li>
+                    </div>
+
+                    <!-- Edit pass and log-out for small screens -->
+                    <div class="row d-lg-none mt-3">
+                        <div class="col d-lg-none text-center">
+                            <li class="nav-item">
+                                <%= link_to "Edit Password", password_path, class:"nav-link button-hover border rounded-pill" %>
+                            </li>
+                        </div>
+                        <div class="vr d-none d-lg-block mx-2 p-0"></div>
+                        <div class="col d-lg-none text-center">
+                            <li class="nav-item">
+                                <%= button_to "Logout", logout_path, method: :delete, class:"btn btn-block btn-outline-light button-hover border rounded-pill w-100"%>
+                            </li>
+                        </div>
+                    </div>
+
+                <% else %>
+
+                    <!-- Sign up and Log in for lg screens -->
+                    <div class="d-none d-lg-flex">
+                        <li class="nav-item">
+                            <%= link_to "Sign up", sign_up_path, class:"nav-link button-hover border rounded-pill" %>
+                        </li>
+                        <div class="vr d-none d-lg-block mx-2 p-0"></div>
+                        <li class="nav-item">
+                            <%= link_to "Log in", log_in_path, class:"nav-link button-hover border rounded-pill" %>
+                        </li>
+                    </div>
+
+                    <!-- Sign up and Log in for small screens -->
+                    <div class="row d-lg-none mt-3">
+                        <div class="col d-lg-none text-center">
+                            <li class="nav-item">
+                                <%= link_to "Sign up", sign_up_path, class:"nav-link button-hover border rounded-pill" %>
+                            </li>
+                        </div>
+                        <div class="col d-lg-none text-center">
+                            <li class="nav-item">
+                                <%= link_to "Log in", log_in_path, class:"nav-link button-hover border rounded-pill" %>
+                            </li>
+                        </div>
+                    </div>
+
+                <% end %>
+
+            </ul>
+        </div>
+    </div>
+</nav>
