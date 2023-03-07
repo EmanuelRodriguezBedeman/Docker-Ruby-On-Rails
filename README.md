@@ -20,7 +20,7 @@
 <h2>Steps</h2>
 
 1. Create folder called `scheduled_tweets`.
-2. [Download the app .zip](https://github.com/EmanuelRodriguezBedeman/Rails---Scheduled-Tweets/archive/refs/heads/main.zip) and extract it **inside** scheduled_tweets's folder.
+2. [Download the app .zip](https://github.com/EmanuelRodriguezBedeman/Rails---Scheduled-Tweets/archive/944a490195eb0e1cbca0e4fbada323cbf6ad336f.zip) and extract it **inside** scheduled_tweets's folder.
 3. [Download docker repo .zip](https://github.com/EmanuelRodriguezBedeman/Docker-ScheduleTweets/archive/refs/heads/main.zip]) and extract it in the **same directory** as schedule_tweets's folder.
 4. Open CLI in this directory and enter: `docker-compose-build`.
 5. Once is done, enter: `docker-compose run --rm --service-ports ruby_dev` to run the container with it's images.
