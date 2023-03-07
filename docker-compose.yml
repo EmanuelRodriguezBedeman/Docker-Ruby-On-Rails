@@ -2,6 +2,20 @@ version: "3.7"
 name: scheduled-tweets-app
 
 services:
+  db:
+    image: postgres
+    restart: always
+    container_name: demo-postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    command: 
+      "postgres -c 'max_connections=500'"
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    ports:
+      - "5432:5432"
 
   ruby_dev:
     build: .
@@ -12,8 +26,14 @@ services:
       - .:/home/app
     environment:
       REDIS_URL: redis://redis-server:6379
+      RAILS_ENV: ${RAILS_ENV}
+      POSTGRES_HOST: ${POSTGRES_HOST}
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     depends_on:
       - redis-server
+      - db
 
   redis-server:
     image: redis
@@ -24,7 +44,9 @@ services:
     command: redis-server
     volumes: 
       - cache:/data
-
+      
 volumes:
+  postgres_data: {}
+  app-storage: {}
   cache:
     driver: local
