@@ -5,7 +5,8 @@
 <h3>FAQ:</h3>
 
 * I don't want to install anything, is there any link to see the see the project?
-  * The app is working to be deployed somewhere in March, stay tune it!
+  * There isn't a Free hosting service to house the app, because all background workers and premium features.
+  * If you want to the use the app, send me an email to emanuel.rodriguez.bedeman@hotmail.com or message me though [linkedin](https://www.linkedin.com/in/emanuel-rodriguez-bedeman/)
 
 * Do I need to install ruby on my pc?
   * No, you don't need to install ruby on your system, only [Docker](https://www.docker.com/)
