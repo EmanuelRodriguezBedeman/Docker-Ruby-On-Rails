@@ -1,10 +1,8 @@
 FROM ruby
 
-RUN mkdir -p /home/app/scheduled_tweets
+RUN mkdir -p /home/app
 
-COPY /scheduled_tweets/. /home/app
-
-WORKDIR /home/app/scheduled_tweets
+WORKDIR /home/app
 
 ENV PORT 3000
 
