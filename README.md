@@ -1,11 +1,11 @@
-<h1 align="center">Docker for Schedule Tweets Web-App</h1>
+<h1 align="center">Docker for Ruby On Rails</h1>
 
-<p align="center">This files are needed to start locally the app, with the only condition of having installed Docker on your system.</p>
+<p align="center">This files are needed to start a Rails app though Docker, with the only condition of having installed Docker on your system.</p>
 
 <h3>FAQ:</h3>
 
 * I don't want to install anything, is there any link to see the see the project?
-  * There isn't a Free hosting service to house the app, because all background workers and premium features.
+  * There isn't a Free hosting service to house the app, because all background workers are premium features.
   * If you want to the use the app, send me an email to emanuel.rodriguez.bedeman@hotmail.com or message me though [linkedin](https://www.linkedin.com/in/emanuel-rodriguez-bedeman/)
 
 * Do I need to install ruby on my pc?
@@ -30,7 +30,7 @@
 6. Run the server by using: `rails server -p $PORT -b 0.0.0.0`.
 7. Enter http://localhost:3000/ in your browser to enter the app.
 
-If you want to Run Sidekiq:
+<h2>If you want to Run Sidekiq:</h2>
 
 1. Open a **new** CLI (don't worry about the directory).
 2. Type: `docker ps` to see all the running containers.
